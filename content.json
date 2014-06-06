@@ -1,0 +1,23 @@
+{
+  "title": "Braintree",
+  "image": "logo.png",
+  "description": "Braintree modules for osCommerce Online Merchant.",
+  "copyright": "Copyright (c) 2014 osCommerce. All rights reserved. Content may be reproduced for personal use only.",
+  "authors": [
+    {
+      "name": "Harald Ponce de Leon"
+    }
+  ],
+  "chapters": {
+    "oscom23": {
+      "title": "osCommerce Online Merchant v2.3",
+      "pages": {
+        "braintree_js": {
+          "title": "Braintree.js",
+          "package_id" :"",
+          "support_url": ""
+        }
+      }
+    }
+  }
+}

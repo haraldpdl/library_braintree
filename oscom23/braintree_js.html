@@ -1,0 +1,201 @@
+<h1>Braintree.js <small>v1.0<br />for osCommerce Online Merchant v2.3</small></h1>
+
+<p>Braintree.js is bundled with osCommerce Online Merchant and is also available as a separate Add-On package existing store owners can use to upgrade to.</p>
+
+<p>The Braintree.js payment module supports the following features:</p>
+
+<ul>
+  <li>Securely stored payment cards (Tokens)</li>
+  <li>SSL Certificate verified transactions</li>
+</ul>
+
+<div class="visible-print">
+  <p>This document can be found online at:</p>
+
+  <p><a href="{link}Package|Library|en&braintree&oscom23&braintree_js{link}">{link}Package|Library|en&braintree&oscom23&braintree_js{link}</a></p>
+</div>
+
+<h2>Features</h2>
+
+<h3>Securely Stored Payment Cards (Tokens)</h3>
+
+<p>Stored tokens allows customers to securely save their card payment information during their purchase and to reference the stored card in their next purchase without having to re-type their card information again. The card payment information is securely stored at Braintree's servers and is referenced with a unique token code.</p>
+
+<h4 class="notoc">Requirements</h4>
+
+<p>Stored tokens requires the following:</p>
+
+<ul>
+  <li>Braintree Cards Management Page content module; it is important to enable the Braintree Cards Management Page content module to allow customers to manage their stored cards in their account area. The content module can be found on the Administration Tool -> Modules -> Content -> Install Module page.</li>
+  <li>Content Modules; as Braintree Cards Management Page is a content module, it requires the Content Modules implementation introduced in osCommerce Online Merchant v2.3.4. Please refer to its <a href="{link}Online|Library|en&oscom_2_3&release_notes&v2_3_4{link}">release notes</a> to add the implementation into your existing store.</li>
+</ul>
+
+<h3>SSL Certificate Verified Transactions</h3>
+
+<p>All secured API transaction calls sent to Braintree are performed by verifying Braintree's SSL certificates to guarantee the identity of Braintree. This is performed by the Braintree PHP Client Library included as part of the module.</p>
+
+<h2>Configuration Settings</h2>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Enable Braintree Module</td>
+      <td>Setting this parameter to <em>True</em> makes the payment method available to customers during the checkout procedure.</td>
+      <td><em>True</em></td>
+    </tr>
+    <tr>
+      <td>Merchant ID</td>
+      <td>
+        The Merchant ID of the account to use for transactions. This can be found on the follolwing page:<br /><br />
+        Account -> My User -> Authorization API Keys -> Client-Side Encrpytion Keys: Merchant ID
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Public Key</td>
+      <td>
+        The Public API Key to use for transactions. This can be found on the follolwing page:<br /><br />
+        Account -> My User -> Authorization API Keys -> API Keys: Public Key
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Private Key</td>
+      <td>
+        The Private API Key to use for transactions. This can be found on the follolwing page:<br /><br />
+        Account -> My User -> Authorization API Keys -> API Keys -> Public Key: View
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Client-Side Encrpytion Key</td>
+      <td>
+        The Client-Side Encrpytion Key of the Merchant ID to use for transactions. This can be found on the follolwing page:<br /><br />
+        Account -> My User -> Authorization API Keys -> Client-Side Encrpytion Keys: CSE Key
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Merchant Accounts</td>
+      <td>
+        Each currency has its own Merchant Account to use for transactions. These can be found on the follolwing page:<br /><br />
+        Settings -> Processing -> Merchant Accounts: Merchant Account ID<br /><br />
+        <div class="note">It is important to enter a Merchant Account for the store default currency. Customer purchases performed in other currencies without an assigned Merchant Account ID will be processed in the default store currency.</div>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Create Tokens</td>
+      <td>Allows customers to store their payment cards securely at Braintree and reference the cards for future payments via tokens.</td>
+      <td><em>False</em></td>
+    </tr>
+    <tr>
+      <td>Verify With CVV</td>
+      <td>Setting this parameter to <em>True</em> verifies the credit card billing address with the Card Verification Value (CVV).</td>
+      <td><em>True</em></td>
+    </tr>
+    <tr>
+      <td>Transaction Method</td>
+      <td>
+        The following transaction methods are available to process transactions with:
+
+        <dl>
+          <dt>Authorize</dt>
+          <dd>The <em>Authorize</em> transaction method only verifies the card and card holder. Authorizations can be captured manually on the Braintree Merchant dashboard.</dd>
+
+          <dt>Payment</dt>
+          <dd>The <em>Payment</em> transaction method verifies, authorises, and transfers the funds to your Merchant account.</dd>
+        </dl>
+      </td>
+      <td><em>Authorize</em></td>
+    </tr>
+    <tr>
+      <td>Set Order Status</td>
+      <td>The orders status will be updated to this value when a successful transaction has been made.</td>
+      <td><em>Default Order Status</em></td>
+    </tr>
+    <tr>
+      <td>Transaction Order Status</td>
+      <td>Transactions are logged in this private order status level.</td>
+      <td><em>Braintree [Transactions]</em></td>
+    </tr>
+    <tr>
+      <td>Transaction Server</td>
+      <td>
+        The following transaction servers are available to process transactions through:
+
+        <dl>
+          <dt>Live</dt>
+          <dd>The <em>Live</em> server is used in production environments to process and receive payments from customers.</dd>
+
+          <dt>Sandbox</dt>
+          <dd>The <em>Sandbox</em> server is only used to test transactions with. No transactions are processed and no payments are made when transactions are being tested.</dd>
+        </dl>
+      </td>
+      <td><em>Live</em></td>
+    </tr>
+    <tr>
+      <td>Payment Zone</td>
+      <td>If set, this payment method will only be available to orders made within the defined zone.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Sort Order</td>
+      <td>The position to show the payment method on the checkout payment page against other available payment methods.</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Add-On Package</h2>
+
+<p>The separate Braintree.js Add-On package is available at:</p>
+
+<p><a href="http://addons.oscommerce.com/info/9080" target="_blank">http://addons.oscommerce.com/info/9080</a></p>
+
+<h2>Online Demonstration</h2>
+
+<p>An online demonstration is available at:</p>
+
+<p><a href="http://demo.oscommerce.com" target="_blank">http://demo.oscommerce.com</a></p>
+
+<p><i>For the online demonstration, Braintree.js has been configured with Braintree's test server environment and requires a test payment card to purchase an order.</i></p>
+
+<h2>Manual Installation (as an Add-On)</h2>
+
+<p>After extracting the Add-On package, copy the files located in the <em>catalog</em> directory to your osCommerce installation directory on the server. The files must be copied in the correct directory structure as extracted from the Add-On package.</p>
+
+<p>The file listing is as follows:</p>
+
+<ul>
+  <li>includes/languages/english/modules/payment/braintree_cc.php</li>
+  <li>includes/modules/payment/braintree_cc <em>(directory)</em></li>
+  <li>includes/modules/payment/braintree_cc.php</li>
+</ul>
+
+<p>The standard language definitions in English are provided in the Add-On package. For additional languages, copy the English language definition file to the appropriate language directory and open the file with a text editor to edit the language definitions. The location of the language definition file must be in:</p>
+
+<ul>
+  <li>includes/languages/<em>LANGUAGE</em>/modules/payment/braintree_cc.php</li>
+</ul>
+
+<p>When the files have been copied to their appropriate locations, the payment module will be available on the Administration Tool -> Modules -> Payment -> Install Module page where it can be installed, or on the Administration Tool -> Modules -> Payment page if the module was already previously installed.</p>
+
+<p>If the module was already previously installed, it is important to visit the module configuration page to make sure new parameters are automatically installed in the database.</p>
+
+<h2>Changelog</h2>
+
+<dl class="bulleted">
+  <dt>v1.1 06-Jun-2014</dt>
+  <dd>Added link to online documentation</dd>
+
+  <dt>v1.0 05-Jun-2014</dt>
+  <dd>Initial Release</dd>
+</dl>
