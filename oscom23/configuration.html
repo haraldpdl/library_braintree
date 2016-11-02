@@ -1,0 +1,110 @@
+<h3 class="notoc">Configuration <small>Braintree -&gt; Configuration</small></h3>
+
+<p>The Braintree App and payment methods can be configured on this page.</p>
+
+<h4>Credit Cards</h4>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Status</td>
+      <td>Set this to <em>Live</em> to process transactions using the Live Credentials, or to <em>Sandbox</em> for the Sandbox Credentials. <em>Disabled</em> disables this as a payment method.</td>
+      <td><em>Live</em></td>
+    </tr>
+    <tr>
+      <td>Entry Form</td>
+      <td>Select which method should be used to accept payment card information.</td>
+      <td><em>Hosted Fields</em></td>
+    </tr>
+    <tr>
+      <td>Payment Types</td>
+      <td>Select which additional payment types should be made available.</td>
+      <td><em></em></td>
+    </tr>
+    <tr>
+      <td>PayPal Button Color</td>
+      <td>Select which color the Checkout with PayPal button should be displayed in.</td>
+      <td><em>Gold</em></td>
+    </tr>
+    <tr>
+      <td>PayPal Button Size</td>
+      <td>Select the size of the Checkout with PayPal button.</td>
+      <td><em>Small</em></td>
+    </tr>
+    <tr>
+      <td>PayPal Button Shape</td>
+      <td>Select the shape of the Checkout with PayPal button.</td>
+      <td><em>Pill</em></td>
+    </tr>
+    <tr>
+      <td>Create Tokens</td>
+      <td>Choose whether customers should be able to securely store their payment card details. Cards are always stored with <em>Always</em> and customers can decide themselves during the checkout procedure with <em>Optional</em>.</td>
+      <td><em>Disabled</em></td>
+    </tr>
+    <tr>
+      <td>Verify CVV</td>
+      <td>Choose whether all payment cards (including stored cards) or just new payment cards should be processed with the CVV Security Code.</td>
+      <td><em>All Cards</em></td>
+    </tr>
+    <tr>
+      <td>3D Secure</td>
+      <td>Choose whether all payment cards (including stored cards) or just new payment cards should be processed with 3D Secure.</td>
+      <td><em>Disabled</em></td>
+    </tr>
+    <tr>
+      <td>Transaction Method</td>
+      <td>
+        The transaction method to use for payments.<br /><br />
+        The <em>Authorize</em> method only authorizes the transaction which can be captured at a later time.<br />
+        The <em>Payment</em> method instantly captures the funds from the customers paying account.
+      </td>
+      <td><em>Payment</em></td>
+    </tr>
+    <tr>
+      <td>Order Status</td>
+      <td>Set the status of orders made with this payment method to this order status level.</td>
+      <td><em>Default Order Status</em></td>
+    </tr>
+    <tr>
+      <td>Payment Zone</td>
+      <td>If set, this payment method will only be available to orders made within the defined zone.</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4>General</h4>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Transactions Order Status</td>
+      <td>Transaction results will be stored at this order status level. Only private order status levels are shown to select from.</td>
+      <td><em>Braintree [Transactions]</em></td>
+    </tr>
+    <tr>
+      <td>Verify SSL</td>
+      <td>Set this to <em>True</em> to verify the SSL Certificate when communicating with HTTPS servers. This is always on for Braintree transactions and only affects communications with the osCommerce website (for App updates).</td>
+      <td><em>True</em></td>
+    </tr>
+    <tr>
+      <td>Proxy</td>
+      <td>A proxy address and port can be entered to pass API transactions through.</td>
+      <td><em></em></td>
+    </tr>
+  </tbody>
+</table>

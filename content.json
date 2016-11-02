@@ -1,8 +1,8 @@
 {
   "title": "Braintree",
   "image": "logo.png",
-  "description": "Braintree modules for osCommerce Online Merchant.",
-  "copyright": "Copyright (c) 2014 osCommerce. All rights reserved. Content may be reproduced for personal use only.",
+  "description": "Braintree Apps for osCommerce Online Merchant.",
+  "copyright": "(c) 2016 osCommerce. All rights reserved. Content may be reproduced for personal use only.",
   "authors": [
     {
       "name": "Harald Ponce de Leon"
@@ -10,10 +10,45 @@
   ],
   "chapters": {
     "oscom23": {
-      "title": "osCommerce Online Merchant v2.3",
+      "title": "App for osCommerce Online Merchant v2.3",
       "pages": {
-        "braintree_js": {
-          "title": "Braintree.js",
+        "introduction": {
+          "title": "Introduction",
+          "package_id" :"",
+          "support_url": ""
+        },
+        "credentials": {
+          "title": "Manage Credentials",
+          "package_id" :"",
+          "support_url": ""
+        },
+        "configuration": {
+          "title": "Configuration",
+          "package_id" :"",
+          "support_url": ""
+        },
+        "order_administration": {
+          "title": "Order Administration",
+          "package_id" :"",
+          "support_url": ""
+        },
+        "installation": {
+          "title": "Installation",
+          "package_id" :"",
+          "support_url": ""
+        },
+        "demonstration": {
+          "title": "Online Demonstration",
+          "package_id" :"",
+          "support_url": ""
+        },
+        "privacy": {
+          "title": "Privacy Policy",
+          "package_id" :"",
+          "support_url": ""
+        },
+        "changelog": {
+          "title": "Changelog",
           "package_id" :"",
           "support_url": ""
         }
