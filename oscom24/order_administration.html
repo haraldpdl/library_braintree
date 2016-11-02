@@ -1,0 +1,28 @@
+<h3 class="notoc">Order Administration</h3>
+
+<p>The Braintree App adds a dedicated Braintree tab to the orders management page and provides the following features:</p>
+
+<ul>
+  <li>Full or partial capture of authorizated transactions</li>
+  <li>Full or partial refunds of captured transactions</li>
+  <li>Cancelling authorized transactions</li>
+  <li>Retrieving the current status of the transaction</li>
+</ul>
+
+{image}order_administration-01.png|The addition of the Braintree tab{image}
+
+<p>The Braintree tab displays additional action buttons depending on the current state of the order.</p>
+
+{image}order_administration-02.png|Additional order action buttons in the Braintree tab{image}
+
+<p>Capturing authorized transactions can occur with a full or partial amount. Capturing an amount can only occur once per authorized transaction.</p>
+
+{image}order_administration-03.png|Capturing a transaction in full or partially{image}
+
+<p>As soon as an order administration action is performed, the order information page is reloaded with a status notification of the action being shown at the top of the page and for successful actions, additional transactional information is stored as an order status comment.</p>
+
+{image}order_administration-04.png|Performing a full capture on an authorized transaction{image}
+
+<p>The Braintree App detects that the current status of the order has changed and now displays a refund button to be able to refund captured authorizations.</p>
+
+{image}order_administration-05.png|Refunding a previously captured transaction{image}

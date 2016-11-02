@@ -9,6 +9,46 @@
     }
   ],
   "chapters": {
+    "oscom24": {
+      "title": "App for osCommerce Online Merchant v2.4",
+      "pages": {
+        "introduction": {
+          "title": "Introduction",
+          "package_id" :"",
+          "support_url": ""
+        },
+        "credentials": {
+          "title": "Manage Credentials",
+          "package_id" :"",
+          "support_url": ""
+        },
+        "configuration": {
+          "title": "Configuration",
+          "package_id" :"",
+          "support_url": ""
+        },
+        "order_administration": {
+          "title": "Order Administration",
+          "package_id" :"",
+          "support_url": ""
+        },
+        "demonstration": {
+          "title": "Online Demonstration",
+          "package_id" :"",
+          "support_url": ""
+        },
+        "privacy": {
+          "title": "Privacy Policy",
+          "package_id" :"",
+          "support_url": ""
+        },
+        "changelog": {
+          "title": "Changelog",
+          "package_id" :"",
+          "support_url": ""
+        }
+      }
+    },
     "oscom23": {
       "title": "App for osCommerce Online Merchant v2.3",
       "pages": {
