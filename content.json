@@ -2,7 +2,7 @@
   "title": "Braintree",
   "image": "logo.png",
   "description": "Braintree Apps for osCommerce Online Merchant.",
-  "copyright": "(c) 2016 osCommerce. All rights reserved. Content may be reproduced for personal use only.",
+  "copyright": "(c) 2017 osCommerce. All rights reserved. Content may be reproduced for personal use only.",
   "authors": [
     {
       "name": "Harald Ponce de Leon"
@@ -70,6 +70,11 @@
         "order_administration": {
           "title": "Order Administration",
           "package_id" :"",
+          "support_url": ""
+        },
+        "ssl_version": {
+          "title": "TLS v1.2 Connections",
+          "package_id": "",
           "support_url": ""
         },
         "installation": {
